@@ -11,12 +11,10 @@
     <link rel="stylesheet" media="all" href="css/bundle.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" crossorigin="anonymous"></script>
-    
-    
+    <script type="text/javascript" src="http://ajaxbootstrap.com/files/counter.js"></script>
+    <!-- <script type="text/javascript" src="/js/script.js"></script> -->
     <script type="text/javascript" src="http://ajaxbootstrap.com/files/functions.js"></script>
-    <script src="jquery.maskedinput.min.js"></script>
-
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.2.7/jquery.inputmask.bundle.min.js"></script>
   </head>
   <body>
 
@@ -66,20 +64,12 @@
                                 </div> 
                             <span class="sp white">Time left to buy:</span>
                             <div class="timer">
-                                <div id="countdown" style="margin-top: 10px; margin-bottom: 10px;">
-                                    <script src="//megatimer.ru/get/3c928e2215624a46dc19aaab1b801974.js"></script>
-                                </div>
+                                <div id="countdown"></div>
                             </div>
                             <div id="form-wrapper2" class="form form-wrapper">
-                                <form class="form orderformcdn" action="api.php" method="POST">
-                                    <input required="" class="form-name name fio" name="name" placeholder="Your name">
-                                    <input class="form-phone phone tel phone_mask" name="phone" placeholder="Your mobile" required="" type="tel">
-                                 
-                                    <script>
- 
-    $(".phone_mask").mask("+9999999999999");
-</script>
-                                    </script>
+                                <form class="form orderformcdn" action="" method="GET">
+                                    <input required="" class="form-name name fio" name="name" placeholder="">
+                                    <input class="form-phone phone tel" name="phone" placeholder="" required="" type="tel">
                                     <select name="extradata[size]" class="form_select" required="">
                                         <option value="" selected="" disabled="">Select size</option>
                                         <option value="S">S</option>
@@ -89,7 +79,7 @@
                                         <option value="XXL">XXL</option>
                                         <option value="XXXL">XXXL</option>
                                     </select>
-                                    <textarea class="address form-text" name="address" id="" rows="3" placeholder="Your address exmpl. Town, area, Building Name or Nr. and unit Nr."></textarea>
+                                    <textarea class="address form-text" name="address" id="" rows="3" placeholder=""></textarea>
 
                                     <input type="hidden" name="_csrf-tds" value="">
                                     <input type="hidden" name="referrer" value="">
@@ -98,7 +88,6 @@
                                     <input type="hidden" class="orderViewHash" name="view_hash" value="">
                                     <input type="hidden" name="sid" value="">
                                     <input type="hidden" name="offer_hash" value="">
-
                                     <button name="button" class="form-btn" type="submit">ORDER NOW</button>
                                 </form>
                             </div>
@@ -283,18 +272,12 @@
                                 </div> 
                             <span class="sp white">Time left to buy:</span>
                             <div class="timer">
-                                <div id="countdown1" style="margin-bottom: 10px; margin-top: 10px;">
-                                    <script src="//megatimer.ru/get/3c928e2215624a46dc19aaab1b801974.js"></script>
-                                </div>
+                                <div id="countdown1"></div>
                             </div>
                             <div id="form-wrapper2" class="form form-wrapper">
-                                <form class="form orderformcdn" action="api.php" method="POST">
-                                    <input required="" class="form-name name fio" name="name" placeholder="Your name">
-                                    <input class="form-phone phone tel phone_mask" name="phone" placeholder="Your mobile" required="" type="tel">
-                                 
-<script>
-    $(".phone_mask").mask("+9999999999999");
-</script>
+                                <form class="form orderformcdn" action="" method="GET">
+                                    <input required="" class="form-name name fio" name="name" placeholder="">
+                                    <input class="form-phone phone tel" name="phone" placeholder="" required="" type="tel">
                                     <select name="extradata[size]" class="form_select" required="">
                                         <option value="" selected="" disabled="">Select size</option>
                                         <option value="S">S</option>
@@ -304,7 +287,7 @@
                                         <option value="XXL">XXL</option>
                                         <option value="XXXL">XXXL</option>
                                     </select>
-                                    <textarea class="address form-text" name="address" id="" rows="3" placeholder="Your address exmpl. Town, area, Building Name or Nr. and unit Nr."></textarea>
+                                    <textarea class="address form-text" name="address" id="" rows="3" placeholder=""></textarea>
 
                                     <input type="hidden" name="_csrf-tds" value="">
                                     <input type="hidden" name="referrer" value="">
@@ -325,7 +308,10 @@
     </div>
      <!-- END content -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-
+    <script type="text/javascript" src="assets/js/form-handler.js"></script>
+    <script type="text/javascript">
+        initLanding(659);
+    </script>
     <!-- END scripts -->
   
   </body>

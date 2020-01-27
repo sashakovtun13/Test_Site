@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+<!-- Facebook Pixel Code -->
+<script>
+    let url_string = window.location.href;
+    let url = new URL(url_string);
+    let pixel = url.searchParams.get("pixel");
+    
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window,document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', pixel);
+    fbq('track', 'Lead');
+    </script>
+    <!-- End Facebook Pixel Code -->
+</head>
+<body style="background: url('img/bra.jpg') no-repeat; background-size: cover; height: 90vh;     background-color: rgba(0,0,0,.6);
+background-blend-mode: darken;">
+    <div class=container4>
+        <a href="index.html" style="position: absolute; left: 10px; top: 10px; color: white; text-decoration: none; font-size: 20px; "><img src="img/left-arrow.svg" alt="" style="width: 30px;"> </a>
+        <div class="con">
+        <h1>Thanks</h1>
+        <h2>for your order</h2>
+        <h3>specialists will contact<br> you shortly</h3>
+        </div>
+      </div>
+    <style>
+        .container4{
+            justify-content: center;
+            padding: 10px;
+            text-align: center;
+            border: 15px solid white;
+            position: relative;
+            width: 50%;
+            height: 50%;
+            top: calc(50% - 50%/2);
+            left: calc(50% - 50%/2);
+        }
+        div.container4 .con {
+    margin: 0;
+    text-align: left;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) }
+        h1{
+            margin: 0;
+            color: white;
+            font-size: 100px;
+            font-weight: bold;
+        }
+        h2{
+            margin: 0;
+            color: white;
+            font-size: 50px;
+
+        }
+        h3{
+            margin: 0;
+            color: white;
+            font-size: 30px;
+
+        }
+
+    
+    </style>
+</body>
+</html>

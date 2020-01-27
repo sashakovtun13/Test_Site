@@ -62,7 +62,7 @@
                             <span class="sp new-price">New Price: 129 AED</span>
                             <span class="sp counter white">Only 7<span class="left_count"></span> left in stock.</span>
                                 <div class="progress-bar blue stripes">
-                                    <span data_p="30"></span>
+                                    <span data_p="40"></span>
                                 </div> 
                             <span class="sp white">Time left to buy:</span>
                             <div class="timer">
@@ -76,9 +76,13 @@
                                     <input class="form-phone phone tel phone_mask" name="phone" placeholder="Your mobile" required="" type="tel">
                                  
                                     <script>
- 
-    $(".phone_mask").mask("+9999999999999");
-</script>
+                                        $.mask.definitions['9'] = '';
+                                       $.mask.definitions['n'] = '[0-9]';
+                                       $(function(){
+                                         $(".phone_mask").mask("+971nnnnnnnnnn");
+                                       });
+                                           
+                                       </script>
                                     </script>
                                     <select name="extradata[size]" class="form_select" required="">
                                         <option value="" selected="" disabled="">Select size</option>
@@ -279,7 +283,7 @@
                             <span class="sp new-price">New Price: 129 AED</span>
                             <span class="sp counter white">Only 7<span class="left_count"></span> left in stock.</span>
                                 <div class="progress-bar blue stripes">
-                                    <span data_p="30"></span>
+                                    <span data_p="40"></span>
                                 </div> 
                             <span class="sp white">Time left to buy:</span>
                             <div class="timer">
@@ -292,9 +296,14 @@
                                     <input required="" class="form-name name fio" name="name" placeholder="Your name">
                                     <input class="form-phone phone tel phone_mask" name="phone" placeholder="Your mobile" required="" type="tel">
                                  
-<script>
-    $(".phone_mask").mask("+9999999999999");
-</script>
+                                    <script>
+                                        $.mask.definitions['9'] = '';
+                                       $.mask.definitions['n'] = '[0-9]';
+                                       $(function(){
+                                         $(".phone_mask").mask("+971nnnnnnnnnn");
+                                       });
+                                           
+                                       </script>
                                     <select name="extradata[size]" class="form_select" required="">
                                         <option value="" selected="" disabled="">Select size</option>
                                         <option value="S">S</option>

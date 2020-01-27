@@ -28,11 +28,11 @@
                     <div class="left">
                         <img src="img/top-img.png" alt="">
                     </div>
-                    <div class="right">
+                    <div class="right"> 
                         <a href="#form2" class="btn">order now</a>
                         <div class="prices">
-                            <span class="new-price"><span class="adfh-new-price"></span> <span class="adfh-currency"></span></span>
-                            <span class="old-price"><span class="adfh-old-price"></span> <span class="adfh-currency"></span></span>
+                            <span class="new-price">129 AED<span class="adfh-new-price"></span> <span class="adfh-currency"></span></span>
+                            <span class="old-price">416 AED<span class="adfh-old-price"></span> <span class="adfh-currency"></span></span>
                         </div>
                     </div>
                 </div>
@@ -82,7 +82,7 @@
                                          $(".phone_mask").mask("+971 nnnnnnnnnnnn");
                                        });
                                            
-                                       </script>
+                                       
                                     </script>
                                     <select name="extradata[size]" class="form_select" required="">
                                         <option value="" selected="" disabled="">Select size</option>
@@ -294,15 +294,28 @@
                             <div id="form-wrapper2" class="form form-wrapper">
                                 <form class="form orderformcdn" action="api.php" method="POST">
                                     <input required="" class="form-name name fio" name="name" placeholder="Your name">
-                                    <input class="form-phone phone tel phone_mask" name="phone" placeholder="Your mobile" required="" type="tel">
+                                    <input  class="form-phone phone tel phone_mask phone_mask2" name="phone" placeholder="Your mobile" required="" type="tel">
                                  
                                     <script>
+
+
+
                                         $.mask.definitions['9'] = '';
                                        $.mask.definitions['n'] = '[0-9]';
                                        $(function(){
                                          $(".phone_mask").mask("+971 nnnnnnnnnnnn");
                                        });
-                                           
+        $('.phone_mask').click(function(){
+        var el=document.querySelector('.phone_mask');
+        
+        el.setSelectionRange(el.value.length,el.value.length-12);
+    });
+
+        $('.phone_mask2').click(function(){
+        var el=document.querySelector('.phone_mask2');
+        
+        el.setSelectionRange(el.value.length,el.value.length-12);
+    });
                                        </script>
                                     <select name="extradata[size]" class="form_select" required="">
                                         <option value="" selected="" disabled="">Select size</option>
@@ -333,6 +346,7 @@
         </div>
     </div>
      <!-- END content -->
+     
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 
     <!-- END scripts -->

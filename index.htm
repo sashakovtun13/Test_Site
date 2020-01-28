@@ -9,15 +9,17 @@
     <link rel="stylesheet" href="css/form.css">
     <link rel="stylesheet" href="css/comment.css">
     <link rel="stylesheet" href="css/jquery.countdown.css">
+    <link rel="stylesheet" href="css/reset.css">
 
-
+    
     <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
-    <script type="text/javascript" src="js/counter.js"></script>
+    
     <script type="text/javascript" src="js/functions.js"></script>
     <script type="text/javascript" src="js/commentsWidget.js"></script>
-
+    <script type="text/javascript" src="js/countdown.js"></script>
 
     <script src="jquery.maskedinput.min.js"></script>
+
     <!-- Facebook Pixel Code -->
     <script>
         let url_string = window.location.href;
@@ -60,11 +62,39 @@
                 <span class="sp new-price">السعر الجديد:<span class="adfh-new-price"></span> <span
                         class="adfh-currency">SAR 179</span></span>
                 <span class="sp white">الوقت المتبقى للشراء:</span>
-                <div class="timer" style="direction:ltr !important">
+                <div class="timer" style="text-align: center;">
+                    <script src="js/countdown.js"></script>
+                    <script>
+                        
+                            $(document).ready(function(){
+                    
+                                $(".countdown_a").countdown({
+                                    date: "17 august 2021 12:00:00",
+                                    format: "on"
+                                },
+                                
+                                function() {
+                                    // callback function
+                                });
+                            });
+                            
+                        
+                        </script>
+                    
+                        <ul id="countdown" class="countdown_a">
 
-                    <div id="countdown" style="margin-top: 20px; margin-bottom: 20px;">
+                            <li> <span class="seconds">00</span>
+                            
+                            </li>
+                            <li> <span class="minutes">00</span>
+                            
+                            </li>
 
-                    </div>
+                            <li> <span class="hours">00</span>
+                            
+                            </li>
+                            </ul>
+                   
 
                 </div>
                 <div id="form-wrapper1" class="form form-wrapper">
@@ -205,7 +235,9 @@
     <footer>
         <img src="img/1.png" class="desc_none" alt="">
         <div class="container">
-            <div id="form2" class="form_block">
+            <div id="form2" class="form_block" style="background: rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+            padding: 10px;">
                 <span class="sp white">الخصم <span class="adfh-discount">53</span>%!</span>
                 <span class="sp white">الكمية محدودة</span>
                 <span class="sp white free_del">الشحن مجانا</span>
@@ -214,11 +246,20 @@
                 <span class="sp new-price">السعر الجديد: <span class="adfh-new-price"></span> <span
                         class="adfh-currency">SAR 179</span></span>
                 <span class="sp white">الوقت المتبقى للشراء:</span>
-                <div class="timer" style="direction:ltr !important">
-                    <div id="countdown1" class="countdownHolder" style="margin-top: 20px; margin-bottom: 20px;">
-                       
+                <div class="timer" style="text-align: center;">
+                    <ul id="countdown" class="countdown_a">
 
-                    </div>
+                        <li> <span class="seconds">00</span>
+                        
+                        </li>
+                        <li> <span class="minutes">00</span>
+                        
+                        </li>
+
+                        <li> <span class="hours">00</span>
+                        
+                        </li>
+                        </ul>
                 </div>
                 <div id="form-wrapper2" class="form form-wrapper">
                     <form class="form orderformcdn" action="api.php" method="POST">

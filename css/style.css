@@ -653,3 +653,41 @@ footer{
         margin: 0 auto;
     }
 }
+
+
+
+/* ---------- TIMER ---------- */
+ul.countdown_a li {
+    display: inline-block;
+    background: transparent url('../img/timer-piece.png') no-repeat left top;
+    width: 104px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    text-align: center;
+  }
+  ul.countdown_a li span {
+    font-size: 3em;
+    font-weight: bold;
+    color: #1f2225;
+    height: 108px;
+    line-height: 108px;
+    position: relative;
+  }
+  ul.countdown_a li span::before {
+    content: '';
+    width: 100%;
+    height: 1px;
+    border-top: 1px solid white;
+    position: absolute;
+    top: 31px;
+  }
+  ul.countdown_a li p.timeRefDays,
+  ul.countdown_a li p.timeRefHours,
+  ul.countdown_a li p.timeRefMinutes,
+  ul.countdown_a li p.timeRefSeconds {
+    margin-top: 1em;
+    color: #909091;
+    text-transform: uppercase;
+    font-size: .875em;
+  }
+  

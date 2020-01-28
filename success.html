@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Success</title>
 <!-- Facebook Pixel Code -->
 <script>
     let url_string = window.location.href;
@@ -24,14 +24,14 @@
     </script>
     <!-- End Facebook Pixel Code -->
 </head>
-<body style="background: url('img/bra.jpg') no-repeat; background-size: cover; height: 90vh;     background-color: rgba(0,0,0,.6);
+<body style="background: url('img/bg1.jpg') center top no-repeat; background-size: cover; height: 100vh;     background-color: rgba(0,0,0,.6);
 background-blend-mode: darken;">
     <div class=container4>
         <a href="index.html" style="position: absolute; left: 10px; top: 10px; color: white; text-decoration: none; font-size: 20px; "><img src="img/left-arrow.svg" alt="" style="width: 30px;"> </a>
         <div class="con">
-        <h1>Thanks</h1>
-        <h2>for your order</h2>
-        <h3>specialists will contact<br> you shortly</h3>
+        <h1>شكر</h1>
+        <h2>لطلبك</h2>
+        <h3>سوف المتخصصين الاتصال بك قريبا</h3>
         </div>
       </div>
     <style>
@@ -48,7 +48,7 @@ background-blend-mode: darken;">
         }
         div.container4 .con {
     margin: 0;
-    text-align: left;
+    text-align: right;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -72,7 +72,46 @@ background-blend-mode: darken;">
             font-size: 30px;
 
         }
+        @media (max-width: 480px){
+            h1{
+            margin: 0;
+            color: white;
+            font-size: 55px;
+            font-weight: bold;
+        }
+        h2{
+            margin: 0;
+            color: white;
+            font-size: 35px;
 
+        }
+        h3{
+            margin: 0;
+            color: white;
+            font-size: 25px;
+
+        }
+        .container4{
+            justify-content: center;
+            
+            text-align: center;
+            border: 15px solid white;
+            position: relative;
+            width: 86%;
+            height: 50%;
+            top: calc(50% - 50%/2);
+            left: 0;
+        }
+        div.container4 .con {
+    margin: 0;
+    text-align: right;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) }
+
+        }
     
     </style>
 </body>

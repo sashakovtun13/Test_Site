@@ -2,121 +2,130 @@
 <html lang="ar">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<title>Mymi Wonder Patch</title>
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/form.css">
-	<link rel="stylesheet" href="css/comment.css">
-	<link rel="stylesheet" href="css/jquery.countdown.css">
-	
-	
-	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
-	
-	<script type="text/javascript" src="js/functions.js"></script>
-	<script type="text/javascript" src="js/commentsWidget.js"></script>
-	
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Mymi Wonder Patch</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/comment.css">
+    <link rel="stylesheet" href="css/jquery.countdown.css">
+
+
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="js/counter.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+    <script type="text/javascript" src="js/commentsWidget.js"></script>
+
 
     <script src="jquery.maskedinput.min.js"></script>
-	<!-- Facebook Pixel Code -->
+    <!-- Facebook Pixel Code -->
     <script>
         let url_string = window.location.href;
         let url = new URL(url_string);
         let pixel = url.searchParams.get("pixel");
-        
-        !function(f,b,e,v,n,t,s)
-        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-        n.queue=[];t=b.createElement(e);t.async=!0;
-        t.src=v;s=b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t,s)}(window,document,'script',
-        'https://connect.facebook.net/en_US/fbevents.js');
+
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
         fbq('init', pixel);
         fbq('track', 'PageView');
-        </script>
-        <!-- End Facebook Pixel Code -->
+    </script>
+    <!-- End Facebook Pixel Code -->
 </head>
+
 <body>
-	<header>
-       <div class="back mob_none"></div>
+    <header>
+        <div class="back mob_none"></div>
         <div class="header_page">
-           <!--  <h1>لصقات التنحيف  MYMI WONDER PATCH - تخلص من دهون البطن بطريقة سريعة وفعالة!</h1> -->
+            <!--  <h1>لصقات التنحيف  MYMI WONDER PATCH - تخلص من دهون البطن بطريقة سريعة وفعالة!</h1> -->
             <img src="img/title.png" alt="" class="title-img">
             <img src="img/title-425.png" alt="" class="title-img-425">
         </div>
         <div class="container">
             <img src="img/bg_top_mob.jpg" alt="" class="abs">
             <div id="form1" class="form_block">
-                 <span class="sp white">الخصم <span class="adfh-discount">53</span>%!</span>
+                <span class="sp white">الخصم <span class="adfh-discount">53</span>%!</span>
                 <span class="sp white">الكمية محدودة</span>
                 <span class="sp white free_del">الشحن مجانا</span>
-                <span class="sp white old-price">السعر القديم: <span class="adfh-old-price"></span> <span class="adfh-currency">SAR 381</span></span>
-                <span class="sp new-price">السعر الجديد:<span class="adfh-new-price"></span> <span class="adfh-currency">SAR 179</span></span>
+                <span class="sp white old-price">السعر القديم: <span class="adfh-old-price"></span> <span
+                        class="adfh-currency">SAR 381</span></span>
+                <span class="sp new-price">السعر الجديد:<span class="adfh-new-price"></span> <span
+                        class="adfh-currency">SAR 179</span></span>
                 <span class="sp white">الوقت المتبقى للشراء:</span>
-                <div class="timer">
+                <div class="timer" style="direction:ltr !important">
+
                     <div id="countdown" style="margin-top: 20px; margin-bottom: 20px;">
-                        <script src="//megatimer.ru/get/3c928e2215624a46dc19aaab1b801974.js"></script>
 
                     </div>
+
                 </div>
                 <div id="form-wrapper1" class="form form-wrapper">
                     <form class="form orderformcdn" action="api.php" method="POST">
-                    <input class="form-name name fio" name="name" placeholder="إسم" required>
-                    <input class="form-phone phone tel phone_mask" name="phone" placeholder="رقم الموبيل" required="" type="tel" required>
+                        <input class="form-name name fio" name="name" placeholder="إسم" required>
+                        <input class="form-phone phone tel phone_mask" name="phone" placeholder="رقم الموبيل"
+                            required="" type="tel" required>
 
-                    <script>
-                        $('.phone_mask').click(function(){
-var el=document.querySelector('.phone_mask');
+                        <script>
+                            $('.phone_mask').click(function () {
+                                var el = document.querySelector('.phone_mask');
 
-el.setSelectionRange(el.value.length,el.value.length-12);
-});
-                    $.mask.definitions['9'] = '';
-                   $.mask.definitions['n'] = '[0-9]';
-                   $(function(){
-                     $(".phone_mask").mask("+966 nnnnnnnnnnnn");
-                   });
-                    
-                   
-                </script>
-                    <textarea class="address form-text" name="address" id="" rows="3" placeholder="العنوان: مدينة، حي، منطقة، برج و غيرها"></textarea>
+                                el.setSelectionRange(el.value.length, el.value.length - 12);
+                            });
+                            $.mask.definitions['9'] = '';
+                            $.mask.definitions['n'] = '[0-9]';
+                            $(function () {
+                                $(".phone_mask").mask("+966 nnnnnnnnnnnn");
+                            });
 
-                    <input type="hidden" name="_csrf-tds" value="">
-                    <input type="hidden" name="referrer" value="">
-                    <input type="hidden" name="view_time" value="">
-                    <input type="hidden" class="adfsh-ck" name="cookie" value="">
-                    <input type="hidden" class="orderViewHash" name="view_hash" value="">
-                    <input type="hidden" name="sid" value="">
-                    <input type="hidden" name="offer_hash" value="">
 
-                    <button name="button" class="form-btn" type="submit">اطلب الان</button>
+                        </script>
+                        <textarea class="address form-text" name="address" id="" rows="3"
+                            placeholder="العنوان: مدينة، حي، منطقة، برج و غيرها"></textarea>
+
+                        <input type="hidden" name="_csrf-tds" value="">
+                        <input type="hidden" name="referrer" value="">
+                        <input type="hidden" name="view_time" value="">
+                        <input type="hidden" class="adfsh-ck" name="cookie" value="">
+                        <input type="hidden" class="orderViewHash" name="view_hash" value="">
+                        <input type="hidden" name="sid" value="">
+                        <input type="hidden" name="offer_hash" value="">
+
+                        <button name="button" class="form-btn" type="submit">اطلب الان</button>
                     </form>
                 </div>
             </div>
         </div>
-	</header>
-	<section class="block1">
-	    <div class="container">
-	   <!--      <p>لصقات التنحيف MYMI WONDER PATCH  - أسرع وسيلة آمنة لتنحيف وشد الجسم. النتيجة رائعة وبدون تعب ولا مجهود وبأسرع وقت ممكن فلا يوجد حتى الان لا أسرع ولا أفضل من منتجات هذه الشركة الرائدة بتخصصها. واللصقات تحتوي على مكونات طبيعية وليس لها اي آثار جانبية ومناسبة للجميع رجال ونساء. مناسبة كثيرا لمشاكل الجسم بعد الولادة. اذا كانت لديكم مناسبة وتريدون الحصول على جسم نحيف ومشدود بوقت سريع فهذا الحل من أفضل الحلول الآمنة . وتعمل اللصقات على تنحيف وشد الجسم بالاضافة لإزالة السليوليت والترهلات ويعمل على ازالة الخطوط الحمراء و تخفيف الخطوط البيضاء والندوب بشكل كبير...  </p> -->
+    </header>
+    <section class="block1">
+        <div class="container">
+            <!--      <p>لصقات التنحيف MYMI WONDER PATCH  - أسرع وسيلة آمنة لتنحيف وشد الجسم. النتيجة رائعة وبدون تعب ولا مجهود وبأسرع وقت ممكن فلا يوجد حتى الان لا أسرع ولا أفضل من منتجات هذه الشركة الرائدة بتخصصها. واللصقات تحتوي على مكونات طبيعية وليس لها اي آثار جانبية ومناسبة للجميع رجال ونساء. مناسبة كثيرا لمشاكل الجسم بعد الولادة. اذا كانت لديكم مناسبة وتريدون الحصول على جسم نحيف ومشدود بوقت سريع فهذا الحل من أفضل الحلول الآمنة . وتعمل اللصقات على تنحيف وشد الجسم بالاضافة لإزالة السليوليت والترهلات ويعمل على ازالة الخطوط الحمراء و تخفيف الخطوط البيضاء والندوب بشكل كبير...  </p> -->
             <img src="img/01.png" alt="" class="img-01">
             <img src="img/0101.png" alt="" class="img-0101">
-	    </div>
-	    <!--<img src="/img/bg4-1.png" class="desc_none" alt="">-->
-    <img src="img/bg2.png" class="desc_none" alt="">
-	</section>
-	<section class="block2">
+        </div>
+        <!--<img src="/img/bg4-1.png" class="desc_none" alt="">-->
+        <img src="img/bg2.png" class="desc_none" alt="">
+    </section>
+    <section class="block2">
         <div class="back2"></div>
-	    <div class="container">
-	        <!-- <p>توضع لصقة واحدة وهي ماتسمى بالراب على أي منطقة بالجسم من اختيارك، فهو يستخدم لجميع مناطق الجسم من الرقبة وحتى الاقدام: الرقبة، الصدر، الزنود،  الذراعين، المعدة، البطن، الظهر، الارداف، الساقين، الافخاذ، “جميع مناطق الجسم".</p> -->
-                     <img src="img/02.png" alt="" class="img-02">
-                     <img src="img/0202.png" alt="" class="img-0202">
-	        <img src="img/bg3-2.png" class="desc_none" alt="">
-	    </div>
-	</section>
-	<section class="block3">
-	    <img src="img/bg4.png" class="desc_none" alt="">
         <div class="container">
-<!--             <h2>المميزات: </h2>
+            <!-- <p>توضع لصقة واحدة وهي ماتسمى بالراب على أي منطقة بالجسم من اختيارك، فهو يستخدم لجميع مناطق الجسم من الرقبة وحتى الاقدام: الرقبة، الصدر، الزنود،  الذراعين، المعدة، البطن، الظهر، الارداف، الساقين، الافخاذ، “جميع مناطق الجسم".</p> -->
+            <img src="img/02.png" alt="" class="img-02">
+            <img src="img/0202.png" alt="" class="img-0202">
+            <img src="img/bg3-2.png" class="desc_none" alt="">
+        </div>
+    </section>
+    <section class="block3">
+        <img src="img/bg4.png" class="desc_none" alt="">
+        <div class="container">
+            <!--             <h2>المميزات: </h2>
             <p>تعمل على تنحيف و شد الجسم وازالة السليوليت والخطوط الحمراء. <br/>
                 تتميز بكبر حجمها حيث أنها تغطي منطقة البطن.<br/>
                 علاج مخصص لتنحيف الجسم.<br/>
@@ -125,56 +134,57 @@ el.setSelectionRange(el.value.length,el.value.length-12);
                 مصنوع من مواد طبيعية فعالة.<br/>
                 آمن وبأسعار معقولة ويعمل فعلا.<br/>
                 يمكن استخدامه للنساء والرجال.</p> -->
-                         <img src="img/03.png" alt="" class="img-03">
-                         <img src="img/0303.png" alt="" class="img-0303">
-        </div>	            
-	</section>
-	<section class="container">
-	    <img src="img/block4.png" alt="" class="center-img">
-	</section>
-	<section class="bef_af ">
-	    <span>قبل وبعد</span>
-	    <img src="img/b1.png" alt="">
-	    <img src="img/b2.png" alt="">
-	    <img src="img/b3.png" alt="">
-	    <img src="img/b4.png" alt="">
-	</section>
-	<section class="container">
-	    <img src="img/desc10.png" alt="" class="center-img">
-	</section>
+            <img src="img/03.png" alt="" class="img-03">
+            <img src="img/0303.png" alt="" class="img-0303">
+        </div>
+    </section>
     <section class="container">
-       <h2 class="text-center">تعليقات عملائنا</h2>
-       <div class="content_bl content_block_5">
-                <div class="container">
-                    <div class="testi">
-                        <div class="row">
-                            <div class="col-sm-offset-1 col-sm-10">
-                                <div class="comments">
-                                    <div class="comments__stats js-commets-count">
-                                        تعليقات 0
-                                    </div>
-                                    <div class="comment-form js-comment-form">
-                                        <form>
-                                            <img class="comment-avatar" src="img/avatar.jpg" alt="Avatar">
-                                            <div class="comment-form__container">
-                                                <textarea name="text" class="comment-form__message" placeholder="أضف تعليق..."></textarea>
-
-                                                <div class="comment-form__controls">
-                                                    <div class="comment-form__author">
-                                                        <input placeholder="اسم" name="author" type="text">
-                                                    </div>
-
-                                                    <button class="comment-form__submit">
-                                                        أضف
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
-                                    <div class="comments-list js-comment-list">
-                                    </div>
+        <img src="img/block4.png" alt="" class="center-img">
+    </section>
+    <section class="bef_af ">
+        <span>قبل وبعد</span>
+        <img src="img/b1.png" alt="">
+        <img src="img/b2.png" alt="">
+        <img src="img/b3.png" alt="">
+        <img src="img/b4.png" alt="">
+    </section>
+    <section class="container">
+        <img src="img/desc10.png" alt="" class="center-img">
+    </section>
+    <section class="container">
+        <h2 class="text-center">تعليقات عملائنا</h2>
+        <div class="content_bl content_block_5">
+            <div class="container">
+                <div class="testi">
+                    <div class="row">
+                        <div class="col-sm-offset-1 col-sm-10">
+                            <div class="comments">
+                                <div class="comments__stats js-commets-count">
+                                    تعليقات 0
                                 </div>
-                                <script type="text/x-template" id="comment-template">
+                                <div class="comment-form js-comment-form">
+                                    <form>
+                                        <img class="comment-avatar" src="img/avatar.jpg" alt="Avatar">
+                                        <div class="comment-form__container">
+                                            <textarea name="text" class="comment-form__message"
+                                                placeholder="أضف تعليق..."></textarea>
+
+                                            <div class="comment-form__controls">
+                                                <div class="comment-form__author">
+                                                    <input placeholder="اسم" name="author" type="text">
+                                                </div>
+
+                                                <button class="comment-form__submit">
+                                                    أضف
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="comments-list js-comment-list">
+                                </div>
+                            </div>
+                            <script type="text/x-template" id="comment-template">
                                     <div class="comment">
                                         <img class="comment-avatar" src="{avatar}" alt="Avatar">
                                         <div class="comment__body">
@@ -186,100 +196,105 @@ el.setSelectionRange(el.value.length,el.value.length-12);
                                         </div>
                                     </div>
                                 </script>
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-	</section>
-	<footer>    
-       <img src="img/1.png" class="desc_none" alt="">    
+        </div>
+    </section>
+    <footer>
+        <img src="img/1.png" class="desc_none" alt="">
         <div class="container">
             <div id="form2" class="form_block">
-                 <span class="sp white">الخصم <span class="adfh-discount">53</span>%!</span>
+                <span class="sp white">الخصم <span class="adfh-discount">53</span>%!</span>
                 <span class="sp white">الكمية محدودة</span>
                 <span class="sp white free_del">الشحن مجانا</span>
-                <span class="sp white old-price">السعر القديم: <span class="adfh-old-price"></span> <span class="adfh-currency">SAR 381</span></span>
-                <span class="sp new-price">السعر الجديد: <span class="adfh-new-price"></span> <span class="adfh-currency">SAR 179</span></span>
+                <span class="sp white old-price">السعر القديم: <span class="adfh-old-price"></span> <span
+                        class="adfh-currency">SAR 381</span></span>
+                <span class="sp new-price">السعر الجديد: <span class="adfh-new-price"></span> <span
+                        class="adfh-currency">SAR 179</span></span>
                 <span class="sp white">الوقت المتبقى للشراء:</span>
                 <div class="timer">
-                    <div id="countdown" style="margin-top: 20px; margin-bottom: 20px;">
-                        <script src="//megatimer.ru/get/3c928e2215624a46dc19aaab1b801974.js"></script>
+                    <div id="countdown" style="margin-top: 20px; margin-bottom: 20px;direction: rtl;">
+                       
 
                     </div>
                 </div>
                 <div id="form-wrapper2" class="form form-wrapper">
                     <form class="form orderformcdn" action="api.php" method="POST">
-                    <input class="form-name name fio" name="name" placeholder="إسم" required>
-                    <input class="form-phone phone tel phone_mask phone_mask2" name="phone" placeholder="رقم الموبيل" required="" type="tel" required>
-                    <script>
-                        $.mask.definitions['9'] = '';
-                       $.mask.definitions['n'] = '[0-9]';
-                       $(function(){
-                         $(".phone_mask").mask("+966 nnnnnnnnnnnn");
-                       });
+                        <input class="form-name name fio" name="name" placeholder="إسم" required>
+                        <input class="form-phone phone tel phone_mask phone_mask2" name="phone"
+                            placeholder="رقم الموبيل" required="" type="tel" required>
+                        <script>
+                            $.mask.definitions['9'] = '';
+                            $.mask.definitions['n'] = '[0-9]';
+                            $(function () {
+                                $(".phone_mask").mask("+966 nnnnnnnnnnnn");
+                            });
 
-$('.phone_mask2').click(function(){
-var el=document.querySelector('.phone_mask2');
+                            $('.phone_mask2').click(function () {
+                                var el = document.querySelector('.phone_mask2');
 
-el.setSelectionRange(el.value.length,el.value.length-12);
-});
-</script>
-                    <textarea class="address form-text" name="address" id="" rows="3" placeholder="العنوان: مدينة، حي، منطقة، برج و غيرها"></textarea>
+                                el.setSelectionRange(el.value.length, el.value.length - 12);
+                            });
+                        </script>
+                        <textarea class="address form-text" name="address" id="" rows="3"
+                            placeholder="العنوان: مدينة، حي، منطقة، برج و غيرها"></textarea>
 
-                    <input type="hidden" name="_csrf-tds" value="">
-                    <input type="hidden" name="referrer" value="">
-                    <input type="hidden" name="view_time" value="">
-                    <input type="hidden" class="adfsh-ck" name="cookie" value="">
-                    <input type="hidden" class="orderViewHash" name="view_hash" value="">
-                    <input type="hidden" name="sid" value="">
-                    <input type="hidden" name="offer_hash" value="">
+                        <input type="hidden" name="_csrf-tds" value="">
+                        <input type="hidden" name="referrer" value="">
+                        <input type="hidden" name="view_time" value="">
+                        <input type="hidden" class="adfsh-ck" name="cookie" value="">
+                        <input type="hidden" class="orderViewHash" name="view_hash" value="">
+                        <input type="hidden" name="sid" value="">
+                        <input type="hidden" name="offer_hash" value="">
 
-                    <button name="button" class="form-btn" type="submit">اطلب الان</button>
+                        <button name="button" class="form-btn" type="submit">اطلب الان</button>
                     </form>
                 </div>
             </div>
         </div>
-	</footer>
+    </footer>
 
-<script>
-            $.commentsWidget({
-                counter: $('.js-commets-count'),
+    <script>
+        $.commentsWidget({
+            counter: $('.js-commets-count'),
             form: $('.js-comment-form'),
             list: $('.js-comment-list'),
             template: $('#comment-template').html(),
             comments: [
-            {
-                avatar: "./img/fb_user-1522.jpg",
-                author: '',
-                text: "",
-                date: '',
-                text2: './img/113.png',
-                 text3: './img/112.png',
-},
-{
-    avatar: "/img/fb_user-1520.jpg",
-                   author: '',
-                text: "",
-                date: '',
-                text2: './img/115.png',
-                text3: './img/114.png',
-},
-{
-    avatar: "./img/fb_user-1517.jpg",
-                   author: '',
-                text: "",
-                date: '',
-                text2: './img/116.png',
-                text3: './img/117.png',
-}
-]
-});
-</script>
+                {
+                    avatar: "./img/fb_user-1522.jpg",
+                    author: '',
+                    text: "",
+                    date: '',
+                    text2: './img/113.png',
+                    text3: './img/112.png',
+                },
+                {
+                    avatar: "/img/fb_user-1520.jpg",
+                    author: '',
+                    text: "",
+                    date: '',
+                    text2: './img/115.png',
+                    text3: './img/114.png',
+                },
+                {
+                    avatar: "./img/fb_user-1517.jpg",
+                    author: '',
+                    text: "",
+                    date: '',
+                    text2: './img/116.png',
+                    text3: './img/117.png',
+                }
+            ]
+        });
+    </script>
 
 
 
-<script type="text/javascript" src="api.js"></script>
+    <script type="text/javascript" src="api.js"></script>
 </body>
 <!-- Copied from http://mymshop.sadeal.net/ by Cyotek WebCopy 1.7.0.600, 28 января 2020 г., 8:48:32 -->
+
 </html>

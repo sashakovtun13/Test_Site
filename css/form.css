@@ -141,6 +141,7 @@ header .form_block .free_del{
 }
 
 .timer .countDays, .timer .countDiv0{
+   
 	display: none;
 } 
 

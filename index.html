@@ -431,10 +431,10 @@ for (let anchor of anchors) {
       <label for="">De exemplu: Maria Ionescu</label>
       <input class="field" type="text" name="name" placeholder="Numele dvs" required="">
       <label for="">De exemplu: + 40345679845</label>
-      <input class="field phone_mask" type="tel" name="phone" placeholder="Nr de telefon" required="">
+      <input class="field phone_mask phone_mask1" type="tel" name="phone" placeholder="Nr de telefon" required="">
       <script>
-        $('.phone_mask').click(function () {
-            var el = document.querySelector('.phone_mask');
+        $('.phone_mask1').click(function () {
+            var el = document.querySelector('.phone_mask1');
 
             el.setSelectionRange(el.value.length, el.value.length - 10);
         });

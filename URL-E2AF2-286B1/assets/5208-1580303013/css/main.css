@@ -1,0 +1,580 @@
+/*reset*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn,
+em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b,
+u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table,
+caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details,
+embed, figure, figcaption, footer, header, menu, nav, output, ruby, section,
+summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; outline: 0;}
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, footer, header, menu, nav, section, main {display: block;}
+
+ol, ul {list-style: none;}
+blockquote, q {quotes: none;}
+img{max-width: 100%; height: auto;}
+a{text-decoration: underline;}
+a:hover{cursor: pointer;}
+
+*::-webkit-input-placeholder {color: #a9a9a9; opacity: 1;}
+*:-moz-placeholder {color: #a9a9a9; opacity: 1;}
+*::-moz-placeholder {color: #a9a9a9; opacity: 1;}
+*:-ms-input-placeholder {color: #a9a9a9; opacity: 1;}
+*{margin: 0; padding: 0;}
+*{-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+button,input{outline: none;}
+
+/* Default settings*/
+
+.hidden{display: none;}
+.clear{clear: both;height: 0px;}
+.invis{display: none;}
+.left{float: left;}
+.right{float: right;}
+.center{text-align: center;}
+.clearfix:after{content: '';display: block;clear: both;}
+
+/*Site settings*/
+h1,h2,h3,h4,h5,h6{font-weight: 500;}
+b, strong{font-weight: 500;}
+
+.opacity-75{
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
+    filter: alpha(opacity=75);
+    -moz-opacity: 0.75;
+    -khtml-opacity: 0.75;
+    opacity: 0.75;
+}
+.shadow-text{
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+}
+.shadow-55{
+    -webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.55);
+    -moz-box-shadow:    0px 1px 2px 0px rgba(0, 0, 0, 0.55);
+    box-shadow:         0px 1px 2px 0px rgba(0, 0, 0, 0.55);
+}
+.border-5{
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+.animate {
+    -webkit-transition: all 0.3s;
+    -moz-transition:    all 0.3s;
+    -o-transition:      all 0.3s;
+    -ms-transition:     all 0.3s;
+    transition:         all 0.3s;
+}
+.col-v{color: #a23ef3;} 
+.col-s{color: #333;}
+.col-m{color: #0fb4e9;}
+
+/*structure*/
+html{
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+body{
+    position: relative;
+    width: 100%;
+    min-width: 320px;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'fregatregular', sans-serif;
+    font-size: 18px;
+    line-height: 1.5em;
+    background: #fff;
+    color: #333;
+    font-weight: 400;
+}
+.main-wrap{
+    position: relative;
+    width: 480px;
+    margin: 0px auto;
+}
+.section{
+    position: relative;
+    padding: 20px;
+}
+h2{
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.2em;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: verdana;
+	padding-bottom:30px;
+	color:#2B45AE;
+}
+h3.h3oll {
+    font-family: 'fregatbolditalic';
+    clear: both;
+    margin: 10px 0 15px;
+}
+p.poll span {
+    font-family: 'fregatbolditalic'; 
+}
+h2>span{
+    position: relative;
+    display: inline-block;
+    font-weight: 700;
+    font-size: 32px;
+}
+h2>span:before,h2>span:after{
+    content: '';
+    position: relative;
+    display: inline-block;
+    width: 42px;
+    height: 2px;
+    background: #00B5ED;
+    top: -0.3em;
+    margin: 0 15px;
+}
+.button-m{
+    appearance: none;
+    border: none;
+    padding: 0;
+    display: block;
+    position: relative;
+    outline: none;
+    width: 387px;
+    height: 88px;
+    line-height: 88px;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 50px;
+    background: linear-gradient(to bottom, #FDD100, #FFAF00);
+    border-bottom: 3px solid #D59300;
+    cursor: pointer;
+}
+.button-m:active{
+    top: -1px;
+}
+.center .button-m{
+    margin: 0px auto;
+}
+.block-1{
+    position: relative;
+    padding: 0px;
+    padding-top: 580px;
+    background: url(../img/top.jpg)/*tpa=car-toy/images/top.jpg*/ top center no-repeat;
+}
+.block-1 .container-1{
+    padding-bottom: 40px;
+}
+.block-1 .container-1>div{
+    position: relative;
+    float: left;
+}
+.cost{
+    width: 190px;
+    text-align: center;
+}
+.cost>p{
+    padding-bottom: 12px;
+    font-size: 20px;
+    color: #333;
+}
+.cost>strong{
+    font-weight: 500;
+    font-size: 40px;
+}
+.old-cost>strong{
+    color: #9e9e9e;
+    text-decoration: line-through;
+}
+.new-cost>strong{
+    color: #333;
+}
+.block-1 .sale{
+    width: 100px;
+    padding-top: 5px;
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
+}
+.block-1 .sale>p{
+    padding-bottom: 10px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.block-1 .sale>strong{
+    font-weight: 500;
+    font-size: 36px;
+}
+.block-1 .container-2{
+    padding-bottom: 40px;
+}
+.block-1 .timer{
+    width: 80%;
+    height: 200px;
+    margin: 0 auto;
+    padding-bottom: 15px;
+}
+.block-1 .timer>p{
+    padding: 20px 0;
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+}
+.attention{
+    padding-bottom: 15px;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;   
+}
+.attention:before{
+    content: '';
+    display: block;
+    width: 44px;
+    height: 44px;
+    margin: 0px auto;
+    background: url(../img/att-sign.jpg)/*tpa=car-toy/images/att-sign.jpg*/ top center no-repeat;
+    margin-bottom: 10px;
+}
+.block-2, .block-4{
+    padding: 0px 0px 0px 0px;
+    background: #fff;
+    color: #000;
+}
+.block-2 .container{
+    padding: 0px 20px;
+}
+.block-2 p{
+    padding-bottom: 20px;
+}
+.block-2 img{
+  margin-bottom:20px;
+}
+
+.block-2 table{
+  /* text-align: center; */
+  /* margin-bottom: 31px; */
+  width: 460px;
+}
+
+.block-2 tr:nth-child(2n) {
+	background-color:#F1F1F1;
+}
+
+.block-2 th{
+  text-align:left;
+  padding:5px 10px 15px 5px;
+  text-decoration:bold;
+  vertical-align:top;
+}
+
+.block-2 td{
+padding:5px 5px 15px 5px;
+font-size:;
+}
+
+.block-2 h4 span{
+   border-bottom: 1px solid #00B5ED; 
+   font-size: 22px;
+}
+.block-2 ul{
+	margin-top:20px;
+	margin-bottom:30px;
+	padding-left:40px;
+}
+.block-2 ul li{
+    margin-bottom:15px;
+	padding-left:30px;
+	list-style:url('../img/li.png')/*tpa=car-toy/images/li.png*/;
+}
+.block-2  h4{
+    font-size: 18px;
+    line-height: 1.4em;
+    padding-bottom: 10px;
+	padding-top: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.block-2 h3{
+    padding: 30px 20px 0;
+    text-align: center;
+    color: #00B5ED;
+    font-weight: 700;
+}
+.block-3{
+    padding: 40px 10px;
+}
+.block-3 h2{
+    font-size: 30px;
+    padding-bottom: 30px;
+}
+.block-3 .container{
+    height: 890px;
+    background: url(../img/tov-1.jpg)/*tpa=car-toy/images/tov-1.jpg*/ center top no-repeat;
+}
+.block-3 .container ul{
+    padding-top: 40px;
+}
+.block-3 .container ul li{
+    position: relative;
+    width: 220px;
+    float: left;
+    padding: 0 0 30px 15px;
+}
+.block-3 .container ul li:before{
+    content: '\2022';
+    position: absolute;
+    left: 0px;
+    color: #3cc7dc;
+    font-size: 22px;
+}
+.block-3 .tov-1{
+    position: relative;
+    width: 363px;
+    height: 363px;
+    margin: 0 auto;
+    background: url(../img/tov-1.jpg)/*tpa=car-toy/images/tov-1.jpg*/ center top no-repeat;
+}
+.block-4 h2{
+    font-size: 35px;
+}
+.block-4 .container{
+    padding: 30px 10px 20px;
+}
+
+.block-4 .video{
+    width:100%;
+	height:250px;
+	border:3px solid #00B5ED;
+	margin-top:10px;
+	margin-bottom:10px;
+}
+
+.block-4 .clearfix{
+    padding-bottom: 30px;
+}
+.block-4 .clearfix:last-child{
+    border: 0px;
+}
+.block-4 .elem-item{
+    position: relative;
+    width: 220px;
+    float: left;
+    margin: 0px 10px;
+    text-align: center;
+    padding-top: 20px;
+    color: #fff;
+}
+.block-4 .elem-item .elem-pic{
+    position: relative;
+    width: 112px;
+    height: 112px;
+    margin: 0 auto;
+    background: url(../img/icon-icon.png)/*tpa=car-toy/images/icon-icon.png*/ no-repeat;
+}
+.block-4 .elem-item .elem-pic-1{
+    background-position: 0 0;
+}
+.block-4 .elem-item .elem-pic-2{
+    background-position: 0 -112px;
+}
+.block-4 .elem-item .elem-pic-3{
+    background-position: 0 -224px;
+}
+.block-4 .elem-item .elem-pic-4{
+    background-position: 0 -336px;
+}
+.block-4 .elem-item .elem-text{
+    padding-top: 10px;
+}
+.block-4 ul li {
+    margin: 10px 0 20px 15px;
+}
+.block-4 ul li img {
+    float:left;
+    padding-right: 20px;
+    margin-left: 20px;
+}
+.block-4 ul li p {
+    margin-left: 170px;
+}
+.block-5{
+    padding: 20px 0;
+}
+.block-5 .container{
+    text-align: center;
+    padding: 30px 0;
+}
+.block-5 .container .tov-2{
+    position: relative;
+    height: 240px;
+    margin: 0 auto;
+    padding-left: 250px;
+    padding-top: 25px;
+    background: url(../img/tov-2.jpg)/*tpa=car-toy/images/tov-2.jpg*/ left top no-repeat;
+}
+.block-5 .old-cost{
+    padding-bottom: 15px;
+}
+.block-7{
+    padding: 0px 20px 0 20px;
+    background: ;
+    overflow: hidden;
+}
+.block-7 h2{
+    font-size: 30px;
+}
+.block-7 .container{
+    padding: 0 0 0 0;
+}
+.block-7 .rev{
+    position: relative;
+    padding-bottom: 40px;
+}
+.block-7 .rev-pic{
+    position: relative;
+    width: 360px;
+    height: 266px;
+    margin: 0 auto;
+    background: url(../img/rev.jpg)/*tpa=car-toy/images/rev.jpg*/ no-repeat;
+}
+.block-7 .rev-1 .rev-pic{
+    background-position: 0 0;
+}
+.block-7 .rev-2 .rev-pic{
+    background-position: 0 -266px;
+}
+.block-7 .rev-3 .rev-pic{
+    background-position: 0 -532px;
+}
+.block-7 .rev-title{
+    font-size: 22px;
+    font-weight: 500;
+    padding: 0px 0 5px 0;
+}          
+.block-7 .rev-text{
+    text-align: left;
+    margin-left: 135px;
+}
+.rev-img {
+    display: block;
+}
+.block-6{
+    padding-top: 40px;
+}
+.block-6 .deliv-item{
+    text-align: center;
+    font-size: 20px;
+    padding: 30px 0;
+    border-bottom: 1px dashed #ccc;
+}
+.block-6 .deliv-item:last-child{
+    border-bottom: 0px;
+}
+.block-6 .deliv-item p{
+    padding-top: 10px;
+}
+.block-6 .deliv-item .deliv-icon{
+    position: relative;
+    display: inline-block;
+    width: 119px;
+    height: 119px;
+    background: url(../img/delivery-icon.png)/*tpa=car-toy/images/delivery-icon.png*/ center top no-repeat;
+}         
+.block-6 .deliv-item .deliv-pic-1{
+    background-position: 50% 0;
+}
+.block-6 .deliv-item .deliv-pic-2{
+    background-position: 0% 0;
+}
+.block-6 .deliv-item .deliv-pic-3{
+    background-position: 100% 0;
+}
+.block-1 .order{
+    padding-top: 20px;
+}
+.block-1 .order>p.center{
+    font-weight: 500;
+}
+.block-1 .order>p.center strong{
+    text-transform: uppercase;
+    font-size: 22px;
+}
+.block-1 form{
+    position: relative;
+    width: 388px;
+    margin: 0px auto;
+    padding-top: 30px;
+}
+.block-1 form>div{
+    padding-bottom: 15px;
+}
+.block-1 form input{
+    width: 388px;
+    height: 80px;
+    border: 3px solid #f4df2a;
+    line-height: 80px;
+    text-indent: 40px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    font-size: 20px;
+}
+.block-1 form input:focus{
+    border-color: #999;
+}
+.footer{
+    font-size: 16px;
+    background: #000;
+    line-height: 1.3em;
+}
+
+.rev .rev-ava{
+    float:left;
+    width: 120px;
+    margin-right: 15px;
+    padding: 15px;
+    border-right: 2px solid #0FBEB1;
+	border-radius:50%;
+}
+/* owmen17 */ 
+.video-container{
+                                position: relative;
+                                width: 100%;
+                                height: 250px;
+								margin-bottom:30px;
+                                overflow:hidden;}
+                            .video-container iframe, .video-container object, .video-container embed{
+                                position:absolute;
+                                display: block;
+                                width: 100%;
+                                height: 100%;
+                                top: 0;
+                                left: 0;}
+
+                                .topbar {
+                                    position: absolute !important;
+                                    top: 0;
+                                    left: 0;
+                                    width: 100%;
+                                    padding: 0 10px;
+                                    background-color: rgba(30, 27, 27, 0.7);
+                                }
+                                .topbar p {
+                                    color: #fff;
+                                    text-align: center;
+                                    font-size: 22px;
+                                    line-height: 1.5;
+                                    text-transform: uppercase;
+                                }
+                                .topbar p span {
+                                    color: yellow;
+                                }
+                                .random {
+                                    display: block;
+                                    margin: 0 auto;
+                                }

@@ -17,6 +17,10 @@
   <link href="URL-E2AF2-286B1/assets/5208-1580303013/css/css.css" rel="stylesheet" type="text/css">
   <script src="jquery-3.1.1.min.js"></script>
   <script src="jquery.maskedinput.min.js"></script>
+  <script src="file/countdown.js"></script>
+  <link rel="stylesheet" href="file/reset.css">
+
+
   <!-- Facebook Pixel Code -->
 <script>
   let url_string = window.location.href;
@@ -38,6 +42,59 @@
 </head>
 
 <body>
+  <script>
+  const anchors = document.querySelectorAll('a[href*="#"]')
+
+for (let anchor of anchors) {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault()
+    
+    const blockID = anchor.getAttribute('href').substr(1)
+    
+    document.getElementById(blockID).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    })
+  })
+}
+  </script>
+  <style>
+    /* ---------- TIMER ---------- */
+    ul.countdown_a li {
+        display: inline-block;
+        background: transparent url('file/timer-piece.png') no-repeat left top;
+        width: 104px;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        text-align: center;
+      }
+      ul.countdown_a li span {
+        font-size: 3em;
+        font-weight: bold;
+        color: #1f2225;
+        height: 108px;
+        line-height: 108px;
+        position: relative;
+      }
+      ul.countdown_a li span::before {
+        content: '';
+        width: 100%;
+        height: 1px;
+        border-top: 1px solid white;
+        position: absolute;
+        top: 31px;
+      }
+      ul.countdown_a li p.timeRefDays,
+      ul.countdown_a li p.timeRefHours,
+      ul.countdown_a li p.timeRefMinutes,
+      ul.countdown_a li p.timeRefSeconds {
+        margin-top: 1em;
+        color: #909091;
+        text-transform: uppercase;
+        font-size: .875em;
+      }    
+    </style>
+
   <div class="main-wrap">
     <div class="section block-1">
       <div class="container-1 clearfix">
@@ -64,13 +121,45 @@
         </div>
       </div>
       <div class="container-2">
-        <div class="timer">
+        <div class="timer" style="text-align: center;">
           <p>Oferta se termină în:</p>
           <br>
-          <script src="URL-E2AF2-286B1/assets/5208-1580303013/js/TimeCircles.js"></script>
+          <script>
+                        
+            $(document).ready(function(){
+    
+                $(".countdown_a").countdown({
+                    date: "17 august 2021 12:00:00",
+                    format: "on"
+                },
+                
+                function() {
+                    // callback function
+                });
+            });
+            
+        
+        </script>
+    
+        <ul id="countdown" class="countdown_a">
+
+          <li> <span class="hours">00</span>
+            
+          </li>
+            <li> <span class="minutes">00</span>
+            
+            </li>
+
+
+            <li> <span class="seconds">00</span>
+            
+            </li>
+        </ul> 
+
+
         </div>
         <div class="attention">Au mai rămas 9 buc. la preț de oferta!</div>
-        <div class="center"><a href="#delivery" onclick="document.location.hash='delivery'; return false;"
+        <div class="center"><a href="#delivery" 
             class="button-m">comanda cu reducere</a></div>
       </div>
     </div>
